@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="message"
+		class="com.bridgeit.DI_XML_Constructor.ImplementClass.ActiveMQMessaging"></bean>
+
+	<bean id="communication" class="com.bridgeit.DI_XML_Constructor.Bean.Communication">
+		<constructor-arg>
+			<ref bean="message" />
+		</constructor-arg>
+	</bean>
+
+</beans>
